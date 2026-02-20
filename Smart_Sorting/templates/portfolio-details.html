@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
+</head>
+<body>
+
+<div class="navbar" style="position:relative; background:#2c3e50;">
+    <h2>NUTRIGAZE</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/predict">Predict</a>
+        <a href="/contact">Contact</a>
+    </div>
+</div>
+
+<div class="predict-section">
+    <h2>Image Classification</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <br>
+        <button type="submit" class="predict-btn">Predict</button>
+    </form>
+
+    {% if fruit %}
+    <div class="result-box">
+        <h3>Prediction Result</h3>
+        <p><b>Item:</b> {{ fruit }}</p>
+        <p><b>Status:</b> {{ condition }}</p>
+        <p><b>Confidence:</b> {{ confidence }}%</p>
+        <img src="{{ image_path }}">
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

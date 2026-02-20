@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - NutriGaze</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
+</head>
+<body>
+
+<div class="navbar" style="position:relative; background:#2c3e50;">
+    <h2>NUTRIGAZE</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/predict">Predict</a>
+        <a href="/contact">Contact</a>
+    </div>
+</div>
+
+<div class="predict-section">
+    <h2>About NutriGaze</h2>
+
+    <div style="max-width:800px; margin:auto; margin-top:30px; line-height:1.8;">
+
+        <p>
+            NutriGaze is an AI-powered fruit and vegetable freshness detection system.
+            It uses Deep Learning and Transfer Learning (VGG16) to classify produce as
+            <b>Healthy</b> or <b>Rotten</b>.
+        </p>
+
+        <br>
+
+        <h3>🔬 Our Technology</h3>
+        <p>
+            We leverage Convolutional Neural Networks trained on a large dataset of fruits
+            and vegetables. The model analyzes color, texture, and visual patterns to
+            determine freshness.
+        </p>
+
+        <br>
+
+        <h3>🎯 Our Mission</h3>
+        <p>
+            Our goal is to reduce food waste and improve food quality monitoring
+            using Artificial Intelligence.
+        </p>
+
+    </div>
+</div>
+
+</body>
+</html>
